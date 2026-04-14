@@ -6,12 +6,12 @@
 from wakeonlan import send_magic_packet
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
+import os
 
-# ───────────────────────────────────────────
-BOT_TOKEN  = "8616875790:AAHfZds4aHYJ1ELW8ZxaUqM5MtL1jMQH1Tc"
+
+BOT_TOKEN  = os.environ.get("BOT_TOKEN")
 ALLOWED_ID = 1130287078
 PC_MAC     = "58:11:22:A8:F7:6C"
-# ───────────────────────────────────────────
 
 
 def is_allowed(update: Update) -> bool:
